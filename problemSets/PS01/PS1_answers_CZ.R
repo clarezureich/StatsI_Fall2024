@@ -42,8 +42,9 @@ se <- sd/sqrt(length(scores))
 
 # Find the confidence interval, using z-score of 1.645, for 90%
 
-lower_90 <- mean - 1.645*se
-upper_90 <- mean + 1.645*se
+z <- abs(qnorm((1-.9)/2))
+lower_90 <- mean - z*se
+upper_90 <- mean + z*se
 lower_90
 upper_90
 
