@@ -33,20 +33,7 @@ lapply(c(),  pkgTest)
 # Problem 1
 #####################
 
-scores <- c(105, 69, 86, 100, 82, 111, 104, 110, 87, 108, 87, 90, 94, 113, 112, 98, 80, 97, 95, 111, 114, 89, 95, 126, 98)
-
-#Find the mean, standard deviation, and standard error of the IQ scores
-mean <-mean(scores)
-sd <- sd(scores)
-se <- sd/sqrt(length(scores))
-
-# Find the confidence interval, using z-score of 1.645, for 90%
-
-z <- abs(qnorm((1-.9)/2))
-lower_90 <- mean - z*se
-upper_90 <- mean + z*se
-lower_90
-upper_90
+y <- c(105, 69, 86, 100, 82, 111, 104, 110, 87, 108, 87, 90, 94, 113, 112, 98, 80, 97, 95, 111, 114, 89, 95, 126, 98)
 
 #####################
 # Problem 2

@@ -62,8 +62,7 @@
 
 \title{Problem Set 1}
 \date{Due: September 30, 2024}
-\author{Applied Stats/Quant Methods 1 \\Clare Zureich}
-
+\author{Applied Stats/Quant Methods 1 \\ Clare Zureich}
 
 \begin{document}
 	\maketitle
@@ -88,14 +87,22 @@ A school counselor was curious about the average of IQ of the students in her sc
 
 \begin{enumerate}
 	\item Find a 90\% confidence interval for the average student IQ in the school.\\
-	\begin{Verbatim}
-		90% Confidence Interval = [93.96, 102.92]
-	\end{Verbatim}
-		
-	\item Next, the school counselor was curious  whether  the average student IQ in her school is higher than the average IQ score (100) among all the schools in the country.\\ 
+	\begin{verbatim}
+	90% Confidence Interval = [93.96, 102.92]
+	\end{verbatim}
+	
+	\lstinputlisting[language=R, firstline=39, lastline=49]{PS01_answers_CZ_VFinal.R}
+	
+	 Next, the school counselor was curious  whether  the average student IQ in her school is higher than the average IQ score (100) among all the schools in the country.
 	
 	\noindent Using the same sample, conduct the appropriate hypothesis test with $\alpha=0.05$.
 \end{enumerate}
+
+\begin{verbatim}
+	 Based on the p-value of .72 and a 95% confidence level, we fail to reject the
+	 null hypothesis that the average IQ scores are less than or equal to 100. 
+\end{verbatim}
+	\lstinputlisting[language=R, firstline=55, lastline=55]{PS01_answers_CZ_VFinal.R}
 
 \newpage
 
@@ -123,12 +130,49 @@ A school counselor was curious about the average of IQ of the students in her sc
 
 \item
 Please plot the relationships among \emph{Y}, \emph{X1}, \emph{X2}, and \emph{X3}? What are the correlations among them (you just need to describe the graph and the relationships among them)?
+
+\begin{figure}[h!]\centering
+	\caption{\footnotesize Figure 1.}
+	\label{fig:plot_1}
+	\includegraphics[width=.75\textwidth]{political_economy_scatter_plot.png}
+\end{figure}
+
+\lstinputlisting[language=R, firstline=64, lastline=74]{PS01_answers_CZ_VFinal.R}
+
+\begin{verbatim}
+	Graph 1: Loose linear positive correlation
+	Graph 2: Non-linear correlation
+	Graph 3: Loose positive correlation 
+	Graph 4: Nonlinear correlation
+	Graph 5: Loose linear positive
+	Graph 6: Nonlinear correlation
+\end{verbatim}
+
 \vspace{.5cm}
 \item
 Please plot the relationship between \emph{Y} and \emph{Region}? On average, which region has the highest per capita expenditure on housing assistance?
-\vspace{.5cm}
+
+\begin{figure}[h!]\centering
+	\caption{\footnotesize Figure 2.}
+	\label{fig:plot_2}
+	\includegraphics[width=.75\textwidth]{housing_expenditure_region__scatter_plot.png}
+\end{figure}
+\begin{verbatim}
+	Region 4, the West, has the highest average of per capita expenditure 
+	on housing assistance
+\end{verbatim}
+\vspace{5cm}
+\lstinputlisting[language=R, firstline=85, lastline=91]{PS01_answers_CZ_VFinal.R}
+\vspace{15cm}
 \item
 Please plot the relationship between \emph{Y} and \emph{X1}? Describe this graph and the relationship. Reproduce the above graph including one more variable \emph{Region} and display different regions with different types of symbols and colors.
+\begin{figure}[h!]\centering
+	\caption{\footnotesize Figure 3.}
+	\label{fig:plot_3}
+	\includegraphics[width=.75\textwidth]{housing_expenditure_personal_income__scatter_plot.png}
+\end{figure}
+\lstinputlisting[language=R, firstline=93, lastline=102]{PS01_answers_CZ_VFinal.R}
+
 \end{itemize}
 
 
